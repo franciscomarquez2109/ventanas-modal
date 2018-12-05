@@ -5,11 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./issets/css/datatables.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <link rel="stylesheet" href="./assets/css/datatables.bootstrap4.css">
+  <script src="assets/js/jquery-3.3.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <script src="issets/js/datatables.min.js"></script>
+  <script src="assets/js/datatables.min.js"></script>
+  <script src="assets/js/datatables.bootstrap4.js"></script>
 </head>
 <body>
 
@@ -28,7 +30,7 @@
                 <input class="form-control" type="text" name="stock" id="stock" placeholder="Stock">
             </div>
             <div class="form-group row">
-                <input class="form-control" type="text" name="precio" id="precio" placeholder="Cantidad">
+                <input class="form-control" type="text" name="precio" id="precio" placeholder="Precio">
             </div>
             <div class="form-group row">
                 <input class="btn btn-success" type="button" name="newproducto" id="newproducto" value="Guardar">
@@ -155,11 +157,11 @@
       </div>
     </div>
 </div>
-<script src="issets/js/jquery.bootstrap-growl.js"></script>
-<script src="issets/js/verproductos.js"></script>
-<script src="issets/js/editproducto.js"></script>
-<script src="issets/js/disabledproducto.js"></script>
-<script src="issets/js/newproducto.js"></script>
+<script src="assets/js/jquery.bootstrap-growl.js"></script>
+<script src="assets/js/verproductos.js"></script>
+<script src="assets/js/editproducto.js"></script>
+<script src="assets/js/disabledproducto.js"></script>
+<script src="assets/js/newproducto.js"></script>
 
 <script>
   $(document).ready( function () {
