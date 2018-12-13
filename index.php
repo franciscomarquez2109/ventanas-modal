@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   
+  
   <link rel="stylesheet" href="./assets/css/datatables.bootstrap4.css">
   <script src="assets/js/jquery-3.3.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="assets/js/datatables.min.js"></script>
   <script src="assets/js/datatables.bootstrap4.js"></script>
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  
 </head>
 <body>
 
@@ -33,6 +37,11 @@
                 <input class="form-control" type="text" name="precio" id="precio" placeholder="Precio">
             </div>
             <div class="form-group row">
+            <input class="form-control" type="checkbox" name="destino" id="destino" checked />
+            <input type="hidden" name="hidden_destino" id="hidden_destino" value="VENTAS" />
+            </div>
+            <hr>
+            <div class="form-group row">
                 <input class="btn btn-success" type="button" name="newproducto" id="newproducto" value="Guardar">
             </div>
         </form>
@@ -45,6 +54,7 @@
         <th>PRODUCTO</th>
         <th>STOCK</th>
         <th>PRECIO</th>
+        <th>DESTINO</th>
         <th>ACCION</th>
       </tr>
     </thead>
@@ -61,6 +71,7 @@
                 <td>'.$row['producto'].'</td>
                 <td>'.$row['stock'].'</td>
                 <td>'.number_format($row['precio'],2,',','.').' BsS</td>
+                <td>'.$row['destino'].'</td>
                 <td><div class="dropdown">
                 <button type="button" class="btn btn-outline-success btn-sm dropdown-toggle" data-toggle="dropdown">
                   Acciones
@@ -161,7 +172,9 @@
 <script src="assets/js/verproductos.js"></script>
 <script src="assets/js/editproducto.js"></script>
 <script src="assets/js/disabledproducto.js"></script>
+<script src="assets/js/buttonToggle.js"></script>
 <script src="assets/js/newproducto.js"></script>
+
 
 <script>
   $(document).ready( function () {
